@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name = "table_child_many_to_one", schema = "public", catalog = "postgres")
+@Table(name = "table_child_many_to_one")
 public class TableChildManyToOneEntity {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)

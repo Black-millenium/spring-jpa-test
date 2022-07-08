@@ -15,7 +15,7 @@ import java.util.Collection;
 
 @Data
 @Entity
-@Table(name = "table_parent_one_to_many", schema = "public", catalog = "postgres")
+@Table(name = "table_parent_one_to_many")
 public class TableParentOneToManyEntity {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
