@@ -12,9 +12,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.MapKeyJoinColumn;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
 import javax.persistence.Table;
 import java.util.Map;
 
+@NamedEntityGraph(
+        name = "Table1Entity.loadAll",
+        attributeNodes = {
+                @NamedAttributeNode(value = "table2EntityList")
+        }
+)
 @Data
 @Entity
 @Table(name = "table1")
@@ -32,5 +40,5 @@ public class Table1Entity {
     @CollectionTable(name = "table1_to_table2", joinColumns = @JoinColumn(name = "fk_table1"))
     @MapKeyJoinColumn(name = "fk_table2")
     @Column(name = "additional_data")
-    private Map<Table2Entity, String> table2EntityStringMap;
+    private Map<Table2Entity, String> table2EntityList;
 }

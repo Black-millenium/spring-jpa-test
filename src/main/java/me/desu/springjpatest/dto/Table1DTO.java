@@ -10,7 +10,7 @@ import java.util.List;
 public class Table1DTO {
     private Integer id;
     private String data;
-    private List<Table2DTOString> table2EntityStringMap;
+    private List<Table2DTOString> table2EntityList;
 
     @Data
     @NoArgsConstructor

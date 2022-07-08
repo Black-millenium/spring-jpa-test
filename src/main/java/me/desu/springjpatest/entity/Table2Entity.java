@@ -8,8 +8,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
 import javax.persistence.Table;
 
+@NamedEntityGraph(
+        name = "Table2Entity.loadAll",
+        attributeNodes = {
+                @NamedAttributeNode("id"),
+                @NamedAttributeNode("data")
+        }
+)
 @Data
 @Entity
 @Table(name = "table2")
